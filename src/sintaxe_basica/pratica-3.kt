@@ -16,11 +16,11 @@ fun main(){
     while (true) {
         println("PONTO!")
         print("Equipe pontuadora: ")
-        ponto_equipe = readln()
+        ponto_equipe = readln().uppercase()
 
-        if (ponto_equipe.equals("a")) {
+        if (ponto_equipe == "A") {
             pontos_a += 1
-        } else if (ponto_equipe.equals("b")) {
+        } else if (ponto_equipe == "B") {
             pontos_b += 1
         }
 
@@ -28,10 +28,10 @@ fun main(){
         println("Equipe A: $pontos_a")
         println("Equipe B: $pontos_b\n")
 
-        if ((pontos_a >= 5) && (pontos_a - pontos_b >= 2)) {
+        if ((pontos_a >= 25) && (pontos_a - pontos_b >= 2)) {
             print("EQUIPE A VENCEU!")
             break
-        } else if ((pontos_b >= 5) && (pontos_b - pontos_a >= 2)) {
+        } else if ((pontos_b >= 25) && (pontos_b - pontos_a >= 2)) {
             print("EQUIPE B VENCEU!")
             break
         }
